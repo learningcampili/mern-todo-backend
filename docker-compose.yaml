@@ -1,0 +1,14 @@
+version: '3.8'
+
+
+services:    
+  db:
+    image: mongo:5.0
+    container_name: node-tasks
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGODB_DATABASE : node-tasks
+    volumes:
+      - ./mongo:/data/db
